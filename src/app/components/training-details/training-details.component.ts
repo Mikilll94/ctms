@@ -10,6 +10,7 @@ import {TrainingService} from '../../services/training.service';
 })
 export class TrainingDetailsComponent implements OnInit {
   training: Training;
+  commentAdded = false;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService) {
   }
@@ -25,9 +26,10 @@ export class TrainingDetailsComponent implements OnInit {
   }
 
   addComment(content) {
-    this.training.comments.push({
+    this.training.comments.unshift({
         author: 'Nieznany',
         content: content,
     });
+    this.commentAdded = true;
   }
 }
