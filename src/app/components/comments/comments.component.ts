@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-comments',
@@ -15,4 +15,8 @@ export class CommentsComponent implements OnInit {
   ngOnInit() {
   }
 
+  addNewComment(content) {
+    this.comments.unshift({ author: 'Unknown', content: content, postingDate: Date.now() });
+    this.commentAdded = true;
+  }
 }

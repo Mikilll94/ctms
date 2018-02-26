@@ -5,7 +5,7 @@
       <div class="form-group">
         <textarea #content class="form-control" rows="3"></textarea>
       </div>
-      <button type="button" class="btn btn-primary">Dodaj komentarz</button>
+      <button (click)="addNewComment(content.value)" type="button" class="btn btn-primary">Dodaj komentarz</button>
     </form>
   </div>
 </div>
@@ -19,7 +19,7 @@
   <div class="media-body">
     <h5 class="mt-0">
       <span>{{ comment.author }}</span>
-      <span class="float-right">{{ comment.postingDate }}</span>
+      <span class="float-right">{{ comment.postingDate | date:"dd.MM.yyyy" }}</span>
     </h5>
     {{ comment.content }}
   </div>
