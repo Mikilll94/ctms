@@ -10,12 +10,10 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [
           {
-            id: 1,
             author: 'Paweł Nowak',
             content: 'Bardzo bogata wiedza, doskonale przygotowane slajdy, szkolenie niezbędne dla pracy zawodowej.',
           },
           {
-            id: 2,
             author: 'Ewa Pawlak',
             content: '100% wymagań = praktyczna formuła + ogromna wiedza + doświadczenie prowadzącego + praktyczny przekaz. Świetnie przygotowane materiały.',
           },
@@ -28,7 +26,6 @@ export class InMemoryDataService implements InMemoryDbService {
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [
           {
-            id: 3,
             author: 'Andrejlll',
             content: ',,Pierwszy raz spotykam się z kreatywną zabawą na szkoleniu twardym :-)',
           }

@@ -23,4 +23,11 @@ export class TrainingDetailsComponent implements OnInit {
     this.trainingService.getTraining(id)
       .subscribe(training =>  this.training = training);
   }
+
+  addComment(content) {
+    this.training.comments.push({
+        author: 'Nieznany',
+        content: content,
+    });
+  }
 }
