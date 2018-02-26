@@ -14,6 +14,7 @@ import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './helpers/in-memory-data-service';
 import {AppRoutingModule} from './app-routing.module';
 import {TrainingService} from './services/training.service';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {TrainingService} from './services/training.service';
     HomepageComponent,
     NavbarComponent,
     TrainingDetailsComponent,
-    TrainingsComponent
+    TrainingsComponent,
+    CommentsComponent,
   ],
   imports: [
     BrowserModule,

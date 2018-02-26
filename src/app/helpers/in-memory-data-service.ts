@@ -12,10 +12,12 @@ export class InMemoryDataService implements InMemoryDbService {
           {
             author: 'Paweł Nowak',
             content: 'Bardzo bogata wiedza, doskonale przygotowane slajdy, szkolenie niezbędne dla pracy zawodowej.',
+            postingDate: '2014-01-28'
           },
           {
             author: 'Ewa Pawlak',
             content: '100% wymagań = praktyczna formuła + ogromna wiedza + doświadczenie prowadzącego + praktyczny przekaz. Świetnie przygotowane materiały.',
+            postingDate: '2015-12-23',
           },
         ]
       },
@@ -27,7 +29,8 @@ export class InMemoryDataService implements InMemoryDbService {
         comments: [
           {
             author: 'Andrejlll',
-            content: ',,Pierwszy raz spotykam się z kreatywną zabawą na szkoleniu twardym :-)',
+            content: 'Pierwszy raz spotykam się z kreatywną zabawą na szkoleniu twardym :-)',
+            postingDate: '2016-12-07',
           }
         ],
       },

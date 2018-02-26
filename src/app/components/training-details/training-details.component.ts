@@ -10,7 +10,6 @@ import {TrainingService} from '../../services/training.service';
 })
 export class TrainingDetailsComponent implements OnInit {
   training: Training;
-  commentAdded = false;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService) {
   }
@@ -23,13 +22,5 @@ export class TrainingDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.trainingService.getTraining(id)
       .subscribe(training =>  this.training = training);
-  }
-
-  addComment(content) {
-    this.training.comments.unshift({
-        author: 'Nieznany',
-        content: content,
-    });
-    this.commentAdded = true;
   }
 }

@@ -1,0 +1,26 @@
+<div *ngIf="!commentAdded" class="card my-4">
+  <h5 class="card-header">Leave a Comment:</h5>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <textarea #content class="form-control" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary">Dodaj komentarz</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="commentAdded" class="card my-4">
+  Komentarz został dodany
+</div>
+
+<div *ngFor="let comment of comments" class="media mb-4">
+  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
+  <div class="media-body">
+    <h5 class="mt-0">
+      <span>{{ comment.author }}</span>
+      <span class="float-right">{{ comment.postingDate }}</span>
+    </h5>
+    {{ comment.content }}
+  </div>
+</div>
