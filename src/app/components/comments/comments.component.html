@@ -10,8 +10,10 @@
   </div>
 </div>
 
-<div *ngIf="commentAdded" class="card my-4">
-  Komentarz został dodany
+<div *ngIf="commentAdded" class="bg-info text-light text-center mb-4 card">
+  <div class="card-block">
+    Komentarz został dodany
+  </div>
 </div>
 
 <div *ngFor="let comment of comments" class="media mb-4">
