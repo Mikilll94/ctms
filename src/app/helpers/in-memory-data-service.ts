@@ -6,8 +6,14 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         name: 'Szkolenie z zakresu BHP',
-        shortDescription: 'Przykładowy opis 1',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy.',
+        description: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy. Bardzo istotne jest, aby zarówno pracodawcy jak i pracownicy mieli świadomość niebezpieczeństw , które mogą pojawić się podczas wykonywania codziennych obowiązków.\n' +
+        '\n' +
+        'Dopilnowanie obowiązku szkoleń BHP spoczywa na pracodawcy. Gdy nie dostosuje się on do odgórnych zaleceń, odpowiedzialność za wszelkie wypadki w miejscu pracy i ich skutki ponosi pracodawca. W konsekwencji firma może popaść w poważne problemy finansowe.\n' +
+        '\n' +
+        'Celem szkolenia BHP jest wpojenie pracownikom zasad organizacji bezpiecznego miejsca pracy oraz zminimalizowanie zagrożeń z nią związanych, a także uniknięcie nieprzyjemnych skutków prawno-finansowych związanych z niedotrzymaniem obowiązku.\n' +
+        '\n' +
+        'Szkolenia BHP Center chronią Twoją firmę i pracowników.',
         comments: [
           {
             author: 'Paweł Nowak',
@@ -24,8 +30,8 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 2,
         name: 'Szkolenie z zarządzania',
-        shortDescription: 'Przykładowy opis 2',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Szkolenie z zarządzania zespołem dla menedżerów, kierowników, właścicieli firm, kadr zarządzających i osób aspirujących na stanowiska kierownicze.',
+        description: 'Warsztat zakłada naukę przez doświadczenie. Nagrywamy na kamerę przykładowe sytuacje szefowskie. Ich wspólna analiza pozwala na wypracowanie efektywnych narzędzi komunikacyjnych menedżera. Zwieńczeniem jest trening nowych umiejętności ze wsparciem trenerów. Indywidualne ćwiczenia umożliwiają dostosowanie narzędzi do realiów uczestników.',
         comments: [
           {
             author: 'Andrejlll',
@@ -36,14 +42,16 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 3,
-        name: 'Kurs samoobrony',
-        shortDescription: 'Przykładowy opis 3',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        name: 'Kurs samoobrony - Krav Maga',
+        shortDescription: 'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie.',
+        description: '\n' +
+        'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie. \n' +
+        '\n' +
+        'Krav maga jest najskuteczniejszym systemem samoobrony i walki wręcz. Bazuje na naturalnych odruchach przez co nauka jest bardzo szybka. System ten łączy różne sztuki walki a z każdego z nich bierze najskuteczniejsze techniki.',
         comments: [
           {
-            id: 4,
             author: 'chris',
-            content: ',,Wykłady super! Pozytywne reakcje prowadzącego na pytania ze strony uczestników.',
+            content: 'Wykłady super! Pozytywne reakcje prowadzącego na pytania ze strony uczestników.',
             training_id: 3,
           }
         ],
