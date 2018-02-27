@@ -67,7 +67,9 @@
             <ngb-progressbar type="danger" [value]="100">1</ngb-progressbar>
           </p>
         </div>
-        <ngb-rating *ngIf="editMode"></ngb-rating>
+        <div>
+          <ngb-rating *ngIf="editMode" max="5"></ngb-rating>
+        </div>
         <button (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
       </div>
     </div>
