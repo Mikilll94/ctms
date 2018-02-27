@@ -10,6 +10,7 @@ import {TrainingService} from '../../services/training.service';
 })
 export class TrainingDetailsComponent implements OnInit {
   training: Training;
+  editMode = false;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService) {
   }
@@ -22,5 +23,9 @@ export class TrainingDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.trainingService.getTraining(id)
       .subscribe(training =>  this.training = training);
+  }
+
+  giveRate() {
+    this.editMode = true;
   }
 }
