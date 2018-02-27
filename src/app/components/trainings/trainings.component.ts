@@ -10,6 +10,7 @@ import {TrainingService} from '../../services/training.service';
 export class TrainingsComponent implements OnInit {
   trainings: Training[];
 
+
   constructor(private trainingService: TrainingService) { }
 
   getTrainings(): void {
