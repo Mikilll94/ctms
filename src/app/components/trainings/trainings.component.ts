@@ -9,7 +9,7 @@ import {TrainingService} from '../../services/training.service';
 })
 export class TrainingsComponent implements OnInit {
   trainings: Training[];
-
+  isCollapsed = true;
 
   constructor(private trainingService: TrainingService) {
   }
