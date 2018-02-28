@@ -20,4 +20,8 @@ export class TrainingsComponent implements OnInit {
   ngOnInit() {
     this.getTrainings();
   }
+
+  filterTrainings(value) {
+    this.trainingService.getTrainings({name: value}).subscribe(trainings => this.trainings = trainings);
+  }
 }

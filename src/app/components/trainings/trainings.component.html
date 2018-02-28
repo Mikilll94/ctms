@@ -19,17 +19,25 @@
     </circle>
   </svg>
 </div>
-<div class="row">
-  <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
-    <div class="card h-100">
-      <a routerLink="/szczegoly/{{ training.id }}">
-        <img class="card-img-top" src="http://placehold.it/700x400">
-      </a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">{{ training.name }}</a>
-        </h4>
-        <p class="card-text">{{ training.shortDescription }}</p>
+<div *ngIf="trainings">
+  <div class="row">
+    <div class="form-group">
+      <label for="search-training">Wyszukaj szkolenie</label>
+      <input (input)="filterTrainings($event.target.value)" class="form-control" id="search-training">
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a routerLink="/szczegoly/{{ training.id }}">
+          <img class="card-img-top" src="http://placehold.it/700x400">
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{ training.name }}</a>
+          </h4>
+          <p class="card-text">{{ training.shortDescription }}</p>
+        </div>
       </div>
     </div>
   </div>

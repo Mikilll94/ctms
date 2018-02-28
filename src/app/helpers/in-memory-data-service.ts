@@ -29,7 +29,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 2,
-        name: 'Szkolenie z zarządzania',
+        name: 'Zarządzanie projektami',
         shortDescription: 'Szkolenie z zarządzania zespołem dla menedżerów, kierowników, właścicieli firm, kadr zarządzających i osób aspirujących na stanowiska kierownicze.',
         description: 'Warsztat zakłada naukę przez doświadczenie. Nagrywamy na kamerę przykładowe sytuacje szefowskie. Ich wspólna analiza pozwala na wypracowanie efektywnych narzędzi komunikacyjnych menedżera. Zwieńczeniem jest trening nowych umiejętności ze wsparciem trenerów. Indywidualne ćwiczenia umożliwiają dostosowanie narzędzi do realiów uczestników.',
         comments: [
