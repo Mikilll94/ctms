@@ -1,10 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
-
 import {AppComponent} from './app.component';
 import {FooterComponent} from './components/footer/footer.component';
-import {HomepageComponent} from './components/homepage/homepage.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {TrainingDetailsComponent} from './components/training-details/training-details.component';
 import {TrainingsComponent} from './components/trainings/trainings.component';
@@ -22,7 +19,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   declarations: [
     AppComponent,
     FooterComponent,
-    HomepageComponent,
     NavbarComponent,
     TrainingDetailsComponent,
     TrainingsComponent,

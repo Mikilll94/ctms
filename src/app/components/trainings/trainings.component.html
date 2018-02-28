@@ -1,42 +1,45 @@
-<div id="preloader" *ngIf="!trainings">
-  <svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
-       preserveAspectRatio="xMidYMid" class="d-block mx-auto lds-double-ring"
-       style="animation-play-state: running; animation-delay: 0s; background: none;">
-    <circle cx="50" cy="50" fill="none" stroke-linecap="round" r="40" stroke-width="4"
-            stroke="rgba(10.701510250756346%,17.70181966573184%,77.8451715284778%,0.979)"
-            stroke-dasharray="62.83185307179586 62.83185307179586" transform="rotate(150 50 50)"
-            style="animation-play-state: running; animation-delay: 0s;">
-      <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50"
-                        keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
-                        style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
-    </circle>
-    <circle cx="50" cy="50" fill="none" stroke-linecap="round" r="35" stroke-width="4" stroke="#2d8274"
-            stroke-dasharray="54.97787143782138 54.97787143782138" stroke-dashoffset="54.97787143782138"
-            transform="rotate(-150 50 50)" style="animation-play-state: running; animation-delay: 0s;">
-      <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;-360 50 50"
-                        keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
-                        style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
-    </circle>
-  </svg>
-</div>
-<div *ngIf="trainings">
-  <div class="row">
-    <div class="form-group">
-      <label for="search-training">Wyszukaj szkolenie</label>
-      <input (input)="filterTrainings($event.target.value)" class="form-control" id="search-training">
-    </div>
+<div class="container">
+  <h1 class="my-4">Dostępne szkolenia w Poznaniu</h1>
+  <div id="preloader" *ngIf="!trainings">
+    <svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+         preserveAspectRatio="xMidYMid" class="d-block mx-auto lds-double-ring"
+         style="animation-play-state: running; animation-delay: 0s; background: none;">
+      <circle cx="50" cy="50" fill="none" stroke-linecap="round" r="40" stroke-width="4"
+              stroke="rgba(10.701510250756346%,17.70181966573184%,77.8451715284778%,0.979)"
+              stroke-dasharray="62.83185307179586 62.83185307179586" transform="rotate(150 50 50)"
+              style="animation-play-state: running; animation-delay: 0s;">
+        <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50"
+                          keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
+                          style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+      </circle>
+      <circle cx="50" cy="50" fill="none" stroke-linecap="round" r="35" stroke-width="4" stroke="#2d8274"
+              stroke-dasharray="54.97787143782138 54.97787143782138" stroke-dashoffset="54.97787143782138"
+              transform="rotate(-150 50 50)" style="animation-play-state: running; animation-delay: 0s;">
+        <animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;-360 50 50"
+                          keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"
+                          style="animation-play-state: running; animation-delay: 0s;"></animateTransform>
+      </circle>
+    </svg>
   </div>
-  <div class="row">
-    <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
-      <div class="card h-100">
-        <a routerLink="/szczegoly/{{ training.id }}">
-          <img class="card-img-top" src="http://placehold.it/700x400">
-        </a>
-        <div class="card-body">
-          <h4 class="card-title">
-            <a href="#">{{ training.name }}</a>
-          </h4>
-          <p class="card-text">{{ training.shortDescription }}</p>
+  <div *ngIf="trainings">
+    <form class="form-inline justify-content-center">
+      <div class="form-group mb-4">
+        <label class="mr-4" for="search-training">Wyszukaj szkolenie</label>
+        <input type="text" (input)="filterTrainings($event.target.value)" class="form-control" id="search-training">
+      </div>
+    </form>
+    <div class="row">
+      <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a routerLink="/szczegoly/{{ training.id }}">
+            <img class="card-img-top" src="http://placehold.it/700x400">
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#">{{ training.name }}</a>
+            </h4>
+            <p class="card-text">{{ training.shortDescription }}</p>
+          </div>
         </div>
       </div>
     </div>

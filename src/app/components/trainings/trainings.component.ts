@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Training} from '../../models/training';
 import {TrainingService} from '../../services/training.service';
 
@@ -11,7 +11,8 @@ export class TrainingsComponent implements OnInit {
   trainings: Training[];
 
 
-  constructor(private trainingService: TrainingService) { }
+  constructor(private trainingService: TrainingService) {
+  }
 
   getTrainings(): void {
     this.trainingService.getTrainings().subscribe(trainings => this.trainings = trainings);
