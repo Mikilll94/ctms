@@ -35,15 +35,21 @@
             <div class="form-group">
               <label class="col-md-2 col-form-label" for="search-training-name">Nazwa szkolenia</label>
               <div class="col-md-6">
-                <input type="text" (input)="filterTrainings($event.target.value)" class="form-control"
+                <input type="text" name="name-filter" [(ngModel)]="nameFilter" (input)="updateFilters()" class="form-control"
                        id="search-training-name">
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-2 col-form-label" for="search-training-date">Data szkolenia</label>
-              <div class="col-md-6">
-                <input type="text" (input)="filterTrainings($event.target.value)" class="form-control"
-                       id="search-training-date">
+              <div>Data szkolenia</div>
+              <label class="col-md-2">Od</label>
+              <div class="col-md-4">
+                <input type="date" name="date-from-filter" [(ngModel)]="dateFromFilter" (input)="updateFilters()" class="form-control"
+                       id="search-training-date-from">
+              </div>
+              <label class="col-md-2">Do</label>
+              <div class="col-md-4">
+                <input type="date" name="date-to-filter" [(ngModel)]="dateToFilter" (input)="updateFilters()" class="form-control"
+                       id="search-training-date-to">
               </div>
             </div>
           </form>
