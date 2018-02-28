@@ -6,6 +6,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         name: 'Szkolenie z zakresu BHP',
+        date: '2018-04-01',
         shortDescription: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy.',
         description: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy. Bardzo istotne jest, aby zarówno pracodawcy jak i pracownicy mieli świadomość niebezpieczeństw , które mogą pojawić się podczas wykonywania codziennych obowiązków.\n' +
         '\n' +
@@ -30,6 +31,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 2,
         name: 'Zarządzanie projektami',
+        date: '2018-06-03',
         shortDescription: 'Szkolenie z zarządzania zespołem dla menedżerów, kierowników, właścicieli firm, kadr zarządzających i osób aspirujących na stanowiska kierownicze.',
         description: 'Warsztat zakłada naukę przez doświadczenie. Nagrywamy na kamerę przykładowe sytuacje szefowskie. Ich wspólna analiza pozwala na wypracowanie efektywnych narzędzi komunikacyjnych menedżera. Zwieńczeniem jest trening nowych umiejętności ze wsparciem trenerów. Indywidualne ćwiczenia umożliwiają dostosowanie narzędzi do realiów uczestników.',
         comments: [
@@ -43,6 +45,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 3,
         name: 'Kurs samoobrony - Krav Maga',
+        date: '2018-04-12',
         shortDescription: 'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie.',
         description: '\n' +
         'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie. \n' +
@@ -59,6 +62,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 4,
         name: 'Szkolenie z Big Data',
+        date: '2018-07-20',
         shortDescription: 'Przykładowy opis 4',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -66,6 +70,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 5,
         name: 'Przyspieszony kurs Pythona',
+        date: '2018-10-24',
         shortDescription: 'Przykładowy opis 5',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -73,6 +78,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 6,
         name: 'Zarządzanie projektami od zera',
+        date: '2018-11-30',
         shortDescription: 'Przykładowy opis 6',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -80,6 +86,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 7,
         name: 'Praktyczny Javascript',
+        date: '2017-01-04',
         shortDescription: 'Przykładowy opis 7',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -87,6 +94,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 8,
         name: 'Database performance',
+        date: '2017-06-23',
         shortDescription: 'Przykładowy opis 8',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -94,6 +102,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 9,
         name: 'Zarządzanie jakością w przedsiębiorstwie',
+        date: '2017-02-12',
         shortDescription: 'Przykładowy opis 9',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
@@ -101,6 +110,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 10,
         name: 'Scala w praktyce',
+        date: '2017-01-17',
         shortDescription: 'Przykładowy opis 10',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
