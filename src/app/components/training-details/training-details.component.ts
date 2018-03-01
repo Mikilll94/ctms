@@ -2,6 +2,7 @@ import {Component, OnInit, Input} from '@angular/core';
 import {Training} from '../../models/training';
 import {ActivatedRoute} from '@angular/router';
 import {TrainingService} from '../../services/training.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-training-details',
@@ -13,7 +14,8 @@ export class TrainingDetailsComponent implements OnInit {
   editMode = false;
   rateSubmitted = false;
 
-  constructor(private route: ActivatedRoute, private trainingService: TrainingService) {
+  constructor(private route: ActivatedRoute, private trainingService: TrainingService,
+              private modalService: NgbModal) {
   }
 
   ngOnInit() {
@@ -32,5 +34,9 @@ export class TrainingDetailsComponent implements OnInit {
 
   submitRate() {
     this.rateSubmitted = true;
+  }
+
+  signForTraining(content) {
+    this.modalService.open(content);
   }
 }

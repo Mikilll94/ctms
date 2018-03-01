@@ -1,3 +1,24 @@
+<ng-template #signupPopup let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Zgłoszenie na szkolenie</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="explanation">Uzasadnienie chęci wzięcia udziału w szkoleniu</label>
+        <textarea class="form-control" id="explanation"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="usability">Do czego wiedza ze szkolenia może przydać ci się w pracy?</label>
+        <textarea class="form-control" id="usability"></textarea>
+      </div>
+      <div class="form-group float-right">
+        <button type="button" class="btn btn-primary">Wyślij do kierownika</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
 <div id="preloader" *ngIf="!training">
   <svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
        preserveAspectRatio="xMidYMid" class="d-block mx-auto lds-double-ring"
@@ -21,27 +42,19 @@
 </div>
 <div *ngIf="training" class="row">
   <div class="col-lg-8">
-
     <h1 class="mt-4">{{ training?.name }}</h1>
-
     <hr>
     <p>Data szkolenia: {{training?.date}}</p>
-
     <hr>
     <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
     <hr>
     <p class="lead">{{ training?.shortDescription }}</p>
-
     <p>{{ training?.description }}</p>
-
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius
       illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-
     <app-comments [comments]="training ? training.comments : []"></app-comments>
   </div>
   <div class="col-md-4">
-
     <div class="card my-4">
       <h5 class="card-header text-center">Lista uczestników</h5>
       <div class="card-body">
@@ -52,7 +65,6 @@
         </ul>
       </div>
     </div>
-
     <div class="card my-4 text-center">
       <h5 class="card-header">Oceny użytkowników</h5>
       <div class="card-body">
@@ -87,8 +99,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="card my-4 text-center">
       <h5 class="card-header">Zapisy</h5>
       <div class="card-body">
@@ -98,7 +108,7 @@
           <div>wolnych miejsc.</div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary">Zapisz się na to szkolenie</button>
+          <button (click)="signForTraining(signupPopup)" class="btn btn-primary">Zapisz się na to szkolenie</button>
         </div>
       </div>
     </div>
