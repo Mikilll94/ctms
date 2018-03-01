@@ -31,28 +31,13 @@
     <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
     <hr>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam
-      sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus
-      inventore?</p>
+    <p class="lead">{{ training?.shortDescription }}</p>
 
     <p>{{ training?.description }}</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius
       illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
 
-    <blockquote class="blockquote">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in
-        <cite title="Source Title">Source Title</cite>
-      </footer>
-    </blockquote>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam
-      sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur
-      ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus,
-      est!</p>
     <app-comments [comments]="training ? training.comments : []"></app-comments>
   </div>
   <div class="col-md-4">
@@ -71,27 +56,35 @@
     <div class="card my-4 text-center">
       <h5 class="card-header">Oceny użytkowników</h5>
       <div class="card-body">
-        <div *ngIf="!editMode">
-          <p>
-            <ngb-progressbar type="success" [value]="25">5</ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="info" [value]="35">4</ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="primary" [value]="50">3</ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="warning" [value]="75">2</ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="danger" [value]="100">1</ngb-progressbar>
-          </p>
+        <div *ngIf="!rateSubmitted">
+          <div>
+            <p>
+              <ngb-progressbar type="success" [value]="25">5</ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="info" [value]="35">4</ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="primary" [value]="50">3</ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="warning" [value]="75">2</ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="danger" [value]="100">1</ngb-progressbar>
+            </p>
+          </div>
+          <div class="form-group">
+            <ngb-rating *ngIf="editMode" max="5"></ngb-rating>
+          </div>
+          <div class="form-group">
+            <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
+            <button *ngIf="editMode" (click)="submitRate()" class="btn btn-primary">Zatwierdź</button>
+          </div>
         </div>
-        <div>
-          <ngb-rating *ngIf="editMode" max="5"></ngb-rating>
+        <div *ngIf="rateSubmitted">
+          Dziękujemy za opinię.
         </div>
-        <button (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
       </div>
     </div>
 

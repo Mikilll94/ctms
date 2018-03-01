@@ -11,6 +11,7 @@ import {TrainingService} from '../../services/training.service';
 export class TrainingDetailsComponent implements OnInit {
   training: Training;
   editMode = false;
+  rateSubmitted = false;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService) {
   }
@@ -27,5 +28,9 @@ export class TrainingDetailsComponent implements OnInit {
 
   giveRate() {
     this.editMode = true;
+  }
+
+  submitRate() {
+    this.rateSubmitted = true;
   }
 }

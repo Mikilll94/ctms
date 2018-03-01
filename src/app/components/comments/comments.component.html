@@ -1,5 +1,5 @@
 <div *ngIf="!commentAdded" class="card my-4">
-  <h5 class="card-header">Leave a Comment:</h5>
+  <h5 class="card-header">Komentarze na temat szkolenia</h5>
   <div class="card-body">
     <form>
       <div class="form-group">
@@ -11,9 +11,7 @@
 </div>
 
 <div *ngIf="commentAdded" class="added-comment-info text-light text-center mb-4 card">
-  <div class="card-block">
-    Komentarz został dodany
-  </div>
+  <div class="card-block">Komentarz został dodany</div>
 </div>
 
 <div *ngFor="let comment of comments" class="media mb-4">
