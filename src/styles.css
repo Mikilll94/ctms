@@ -1,5 +1,8 @@
 body {
   padding-top: 54px;
+  padding-bottom: 120px;
+  position: relative;
+  min-height: 100vh;
 }
 
 @media (min-width: 992px) {
