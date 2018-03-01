@@ -23,38 +23,33 @@
   </div>
 
   <div *ngIf="trainings">
-    <p>
+    <p class="text-center">
       <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed">
         Wyszukaj szkolenie
       </button>
     </p>
     <div class="mb-4" [ngbCollapse]="isCollapsed">
-      <div class="card">
-        <div class="card-body">
+      <div class="card card-body search-card">
           <form>
             <div class="form-group form-inline">
-              <label class="col-md-2 col-form-label" for="search-training-name">Nazwa szkolenia</label>
+              <label class="offset-sm-3 col-sm-2" for="search-training-name">Nazwa szkolenia</label>
               <input type="text" name="name-filter" [(ngModel)]="nameFilter" (input)="updateFilters()"
-                     class="form-control"
-                     id="search-training-name">
+                     class="col-sm-4 form-control" id="search-training-name">
             </div>
           </form>
         </div>
-      </div>
-      <div class="mb-4 card">
-        <div class="card-body">
-          <form>
-            <label class="col-md-2">Data szkolenia</label>
+      <div class="search-card mb-4 card card-body">
+        <div class="text-center">Data szkolenia</div>
+        <form>
             <div class="form-group form-inline">
-              <label class="col-md-2">Od</label>
+              <label class="col-sm-2">Od</label>
               <input type="date" name="date-from-filter" [(ngModel)]="dateFromFilter" (input)="updateFilters()"
-                     class="form-control" id="search-training-date-from">
-              <label class="col-md-2">Do</label>
+                     class="col-sm-4 form-control" id="search-training-date-from">
+              <label class="col-sm-2">Do</label>
               <input type="date" name="date-to-filter" [(ngModel)]="dateToFilter" (input)="updateFilters()"
-                     class="form-control" id="search-training-date-to">
+                     class="col-sm-4 form-control" id="search-training-date-to">
             </div>
           </form>
-        </div>
       </div>
     </div>
     <div class="row">
