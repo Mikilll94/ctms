@@ -1,5 +1,3 @@
-import {Rate} from './rate';
-
 export class Training {
   id: number;
   name: string;
@@ -7,5 +5,9 @@ export class Training {
   shortDescription: string;
   description: string;
   comments: Comment[];
-  rate: Rate;
+  rateOne: number;
+  rateTwo: number;
+  rateThree: number;
+  rateFour: number;
+  rateFive: number;
 }

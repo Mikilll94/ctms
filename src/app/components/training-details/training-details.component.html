@@ -70,23 +70,23 @@
       <div class="card-body">
         <div>
           <p>
-            <ngb-progressbar type="success" [value]="100 * training.rate.five/totalRate">{{training.rate.five}}
+            <ngb-progressbar type="success" [value]="100 * training.rateFive/total">{{training.rateFive}}
             </ngb-progressbar>
           </p>
           <p>
-            <ngb-progressbar type="info" [value]="100 * training.rate.four/totalRate">{{training.rate.four}}
+            <ngb-progressbar type="info" [value]="100 * training.rateFour/total">{{training.rateFour}}
             </ngb-progressbar>
           </p>
           <p>
-            <ngb-progressbar type="primary" [value]="100 * training.rate.three/totalRate">{{training.rate.three}}
+            <ngb-progressbar type="primary" [value]="100 * training.rateThree/total">{{training.rateThree}}
             </ngb-progressbar>
           </p>
           <p>
-            <ngb-progressbar type="warning" [value]="100 * training.rate.two/totalRate">{{training.rate.two}}
+            <ngb-progressbar type="warning" [value]="100 * training.rateTwo/total">{{training.rateTwo}}
             </ngb-progressbar>
           </p>
           <p>
-            <ngb-progressbar type="danger" [value]="100 * training.rate.one/totalRate">{{training.rate.one}}
+            <ngb-progressbar type="danger" [value]="100 * training.rateOne/total">{{training.rateOne}}
             </ngb-progressbar>
           </p>
         </div>
@@ -96,7 +96,7 @@
           </div>
           <div class="form-group">
             <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
-            <button *ngIf="editMode" (click)="submitRate(ngbRating)" class="btn btn-primary">Zatwierdź</button>
+            <button *ngIf="editMode" (click)="submitRate()" class="btn btn-primary">Zatwierdź</button>
           </div>
         </div>
         <div *ngIf="rateSubmitted">

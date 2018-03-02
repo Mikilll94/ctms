@@ -25,6 +25,7 @@ export class TrainingService {
   }
 
   updateTraining(training: Training): Observable<any> {
+    console.log(training);
     return this.http.put(this.trainingsUrl, training);
   }
 }

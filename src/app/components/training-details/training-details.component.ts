@@ -11,16 +11,16 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class TrainingDetailsComponent implements OnInit {
   rateMapping = {
-    1: 'one',
-    2: 'two',
-    3: 'three',
-    4: 'four',
-    5: 'five',
+    1: 'rateOne',
+    2: 'rateTwo',
+    3: 'rateThree',
+    4: 'rateFour',
+    5: 'rateFive',
   };
   training: Training;
   editMode = false;
   rateSubmitted = false;
-  totalRate: number;
+  total: number;
   submittedRate: number;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService,
@@ -36,7 +36,8 @@ export class TrainingDetailsComponent implements OnInit {
     this.trainingService.getTraining(id)
       .subscribe(training => {
         this.training = training;
-        this.totalRate = Object.values(training.rate).reduce((p, c) => p + c, 0);
+        this.total = training.rateOne + training.rateTwo +
+          training.rateThree + training.rateFour + training.rateFive;
       });
   }
 
@@ -46,10 +47,7 @@ export class TrainingDetailsComponent implements OnInit {
 
   submitRate() {
     this.rateSubmitted = true;
-    console.log("PRZED", this.training);
-    debugger;
-    this.training.rate[this.rateMapping[this.submittedRate]]++;
-    console.log("PO", this.training);
+    this.training[this.rateMapping[this.submittedRate]]++;
     this.trainingService.updateTraining(this.training).subscribe();
   }
 
