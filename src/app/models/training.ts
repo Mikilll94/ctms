@@ -1,3 +1,5 @@
+import {Rate} from './rate';
+
 export class Training {
   id: number;
   name: string;
@@ -5,4 +7,5 @@ export class Training {
   shortDescription: string;
   description: string;
   comments: Comment[];
+  rate: Rate;
 }

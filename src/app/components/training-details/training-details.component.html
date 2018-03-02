@@ -41,18 +41,18 @@
   </svg>
 </div>
 <div *ngIf="training" class="row">
-  <div class="col-lg-8">
-    <h1 class="mt-4">{{ training?.name }}</h1>
+  <div class="col-md-8">
+    <h1 class="mt-4">{{ training.name }}</h1>
     <hr>
-    <p>Data szkolenia: {{training?.date}}</p>
+    <p>Data szkolenia: {{training.date}}</p>
     <hr>
     <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
     <hr>
-    <p class="lead">{{ training?.shortDescription }}</p>
-    <p>{{ training?.description }}</p>
+    <p class="lead">{{ training.shortDescription }}</p>
+    <p>{{ training.description }}</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius
       illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-    <app-comments [comments]="training ? training.comments : []"></app-comments>
+    <app-comments [comments]="training.comments"></app-comments>
   </div>
   <div class="col-md-4">
     <div class="card my-4">
@@ -71,19 +71,19 @@
         <div *ngIf="!rateSubmitted">
           <div>
             <p>
-              <ngb-progressbar type="success" [value]="25">5</ngb-progressbar>
+              <ngb-progressbar type="success" [value]="100 * training.rate.five/totalRate">{{training.rate.five}}</ngb-progressbar>
             </p>
             <p>
-              <ngb-progressbar type="info" [value]="35">4</ngb-progressbar>
+              <ngb-progressbar type="info" [value]="100 * training.rate.four/totalRate">{{training.rate.four}}</ngb-progressbar>
             </p>
             <p>
-              <ngb-progressbar type="primary" [value]="50">3</ngb-progressbar>
+              <ngb-progressbar type="primary" [value]="100 * training.rate.three/totalRate">{{training.rate.three}}</ngb-progressbar>
             </p>
             <p>
-              <ngb-progressbar type="warning" [value]="75">2</ngb-progressbar>
+              <ngb-progressbar type="warning" [value]="100 * training.rate.two/totalRate">{{training.rate.two}}</ngb-progressbar>
             </p>
             <p>
-              <ngb-progressbar type="danger" [value]="100">1</ngb-progressbar>
+              <ngb-progressbar type="danger" [value]="100 * training.rate.one/totalRate">{{training.rate.one}}</ngb-progressbar>
             </p>
           </div>
           <div class="form-group">

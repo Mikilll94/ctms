@@ -13,6 +13,7 @@ export class TrainingDetailsComponent implements OnInit {
   training: Training;
   editMode = false;
   rateSubmitted = false;
+  totalRate: number;
 
   constructor(private route: ActivatedRoute, private trainingService: TrainingService,
               private modalService: NgbModal) {
@@ -25,7 +26,10 @@ export class TrainingDetailsComponent implements OnInit {
   getTraining(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.trainingService.getTraining(id)
-      .subscribe(training =>  this.training = training);
+      .subscribe(training => {
+        this.training = training;
+        this.totalRate = Object.values(training.rate).reduce((p, c) => p + c, 0);
+      });
   }
 
   giveRate() {

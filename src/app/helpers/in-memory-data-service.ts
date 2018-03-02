@@ -26,7 +26,14 @@ export class InMemoryDataService implements InMemoryDbService {
             content: '100% wymagań = praktyczna formuła + ogromna wiedza + doświadczenie prowadzącego + praktyczny przekaz. Świetnie przygotowane materiały.',
             postingDate: '2015-12-23',
           },
-        ]
+        ],
+        rate: {
+          one: 5,
+          two: 3,
+          three: 1,
+          four: 0,
+          five: 3,
+        }
       },
       {
         id: 2,
@@ -41,6 +48,13 @@ export class InMemoryDataService implements InMemoryDbService {
             postingDate: '2016-12-07',
           }
         ],
+        rate: {
+          one: 2,
+          two: 1,
+          three: 4,
+          four: 2,
+          five: 0,
+        }
       },
       {
         id: 3,
@@ -58,6 +72,13 @@ export class InMemoryDataService implements InMemoryDbService {
             training_id: 3,
           }
         ],
+        rate: {
+          one: 3,
+          two: 1,
+          three: 2,
+          four: 1,
+          five: 0,
+        }
       },
       {
         id: 4,
@@ -66,6 +87,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 4',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 4,
+          two: 3,
+          three: 6,
+          four: 2,
+          five: 7,
+        }
       },
       {
         id: 5,
@@ -74,6 +102,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 5',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 2,
+          two: 3,
+          three: 4,
+          four: 6,
+          five: 7,
+        }
       },
       {
         id: 6,
@@ -82,6 +117,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 6',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 2,
+          two: 4,
+          three: 2,
+          four: 5,
+          five: 1,
+        }
       },
       {
         id: 7,
@@ -90,6 +132,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 7',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 4,
+          two: 2,
+          three: 3,
+          four: 4,
+          five: 2,
+        }
       },
       {
         id: 8,
@@ -98,6 +147,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 8',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 4,
+          two: 3,
+          three: 5,
+          four: 6,
+          five: 1,
+        }
       },
       {
         id: 9,
@@ -106,6 +162,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 9',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 5,
+          two: 4,
+          three: 1,
+          four: 2,
+          five: 4,
+        }
       },
       {
         id: 10,
@@ -114,6 +177,13 @@ export class InMemoryDataService implements InMemoryDbService {
         shortDescription: 'Przykładowy opis 10',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
         comments: [],
+        rate: {
+          one: 3,
+          two: 5,
+          three: 2,
+          four: 1,
+          five: 2,
+        }
       }
     ];
     return {trainings};
