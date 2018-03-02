@@ -4,7 +4,6 @@ export class Training {
   date: string;
   shortDescription: string;
   description: string;
-  comments: Comment[];
   rateOne: number;
   rateTwo: number;
   rateThree: number;

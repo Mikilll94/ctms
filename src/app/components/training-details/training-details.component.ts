@@ -1,8 +1,10 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Training} from '../../models/training';
+import {Comment} from '../../models/comment';
 import {ActivatedRoute} from '@angular/router';
 import {TrainingService} from '../../services/training.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {CommentService} from '../../services/comment.service';
 
 @Component({
   selector: 'app-training-details',
@@ -18,17 +20,19 @@ export class TrainingDetailsComponent implements OnInit {
     5: 'rateFive',
   };
   training: Training;
+  comments: Comment[];
   editMode = false;
   rateSubmitted = false;
   total: number;
   submittedRate: number;
 
-  constructor(private route: ActivatedRoute, private trainingService: TrainingService,
-              private modalService: NgbModal) {
+  constructor(private route: ActivatedRoute, private modalService: NgbModal,
+              private trainingService: TrainingService, private commentService: CommentService) {
   }
 
   ngOnInit() {
     this.getTraining();
+    this.getComments();
   }
 
   getTraining(): void {
@@ -39,6 +43,12 @@ export class TrainingDetailsComponent implements OnInit {
         this.total = training.rateOne + training.rateTwo +
           training.rateThree + training.rateFour + training.rateFive;
       });
+  }
+
+  getComments() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.commentService.getComments(id)
+      .subscribe(comments => this.comments = comments);
   }
 
   giveRate() {

@@ -1,4 +1,7 @@
-import {Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {CommentService} from '../../services/comment.service';
+import {Comment} from '../../models/comment';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-comments',
@@ -10,13 +13,19 @@ export class CommentsComponent implements OnInit {
   @Input() comments;
   commentAdded = false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private commentService: CommentService) {
+  }
 
   ngOnInit() {
   }
 
   addNewComment(content) {
-    this.comments.unshift({ author: 'Unknown', content: content, postingDate: Date.now() });
     this.commentAdded = true;
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.commentService.addComment(new Comment('Unknown', id, content, Date.now()))
+      .subscribe(comment => {
+        console.log(comment);
+        this.comments.push(comment)
+      });
   }
 }

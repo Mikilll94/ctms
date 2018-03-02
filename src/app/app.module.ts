@@ -13,6 +13,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {TrainingService} from './services/training.service';
 import {CommentsComponent} from './components/comments/comments.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {CommentService} from './services/comment.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ),
     NgbModule.forRoot()
   ],
-  providers: [TrainingService],
+  providers: [TrainingService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
