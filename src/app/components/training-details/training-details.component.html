@@ -68,35 +68,40 @@
     <div class="card my-4 text-center">
       <h5 class="card-header">Oceny użytkowników</h5>
       <div class="card-body">
+        <div>
+          <p>
+            <ngb-progressbar type="success" [value]="100 * training.rate.five/totalRate">{{training.rate.five}}
+            </ngb-progressbar>
+          </p>
+          <p>
+            <ngb-progressbar type="info" [value]="100 * training.rate.four/totalRate">{{training.rate.four}}
+            </ngb-progressbar>
+          </p>
+          <p>
+            <ngb-progressbar type="primary" [value]="100 * training.rate.three/totalRate">{{training.rate.three}}
+            </ngb-progressbar>
+          </p>
+          <p>
+            <ngb-progressbar type="warning" [value]="100 * training.rate.two/totalRate">{{training.rate.two}}
+            </ngb-progressbar>
+          </p>
+          <p>
+            <ngb-progressbar type="danger" [value]="100 * training.rate.one/totalRate">{{training.rate.one}}
+            </ngb-progressbar>
+          </p>
+        </div>
         <div *ngIf="!rateSubmitted">
-          <div>
-            <p>
-              <ngb-progressbar type="success" [value]="100 * training.rate.five/totalRate">{{training.rate.five}}</ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="info" [value]="100 * training.rate.four/totalRate">{{training.rate.four}}</ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="primary" [value]="100 * training.rate.three/totalRate">{{training.rate.three}}</ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="warning" [value]="100 * training.rate.two/totalRate">{{training.rate.two}}</ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="danger" [value]="100 * training.rate.one/totalRate">{{training.rate.one}}</ngb-progressbar>
-            </p>
-          </div>
           <div class="form-group">
-            <ngb-rating *ngIf="editMode" max="5"></ngb-rating>
+            <ngb-rating [(rate)]="submittedRate" *ngIf="editMode" max="5"></ngb-rating>
           </div>
           <div class="form-group">
             <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
-            <button *ngIf="editMode" (click)="submitRate()" class="btn btn-primary">Zatwierdź</button>
+            <button *ngIf="editMode" (click)="submitRate(ngbRating)" class="btn btn-primary">Zatwierdź</button>
           </div>
         </div>
         <div *ngIf="rateSubmitted">
-          Dziękujemy za opinię.
-        </div>
+            Dziękujemy za opinię.
+          </div>
       </div>
     </div>
     <div class="card my-4 text-center">

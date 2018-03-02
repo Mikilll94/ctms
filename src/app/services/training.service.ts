@@ -23,4 +23,8 @@ export class TrainingService {
     const url = `${this.trainingsUrl}/${id}`;
     return this.http.get<Training>(url);
   }
+
+  updateTraining(training: Training): Observable<any> {
+    return this.http.put(this.trainingsUrl, training);
+  }
 }
