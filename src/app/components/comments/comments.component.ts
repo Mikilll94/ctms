@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CommentsComponent implements OnInit {
 
-  @Input() comments;
+  @Input() comments: Comment[];
   commentAdded = false;
 
   constructor(private route: ActivatedRoute, private commentService: CommentService) {
@@ -23,9 +23,6 @@ export class CommentsComponent implements OnInit {
     this.commentAdded = true;
     const id = +this.route.snapshot.paramMap.get('id');
     this.commentService.addComment(new Comment('Unknown', id, content, Date.now()))
-      .subscribe(comment => {
-        console.log(comment);
-        this.comments.push(comment)
-      });
+      .subscribe(comment => this.comments.unshift(comment));
   }
 }
