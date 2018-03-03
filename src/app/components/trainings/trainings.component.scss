@@ -1,3 +1,14 @@
-.search-card {
-  border: 2px solid #0748c1;
+.search-form {
+  padding: 5px;
+  background-color: rgb(12, 90, 174);
+  color: #ffffff;
+
+  .search-label {
+    font-size: 20px;
+  }
+
+  input {
+    border-radius: 15px;
+    border-color: #000000;
+  }
 }
