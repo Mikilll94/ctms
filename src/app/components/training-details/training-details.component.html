@@ -19,7 +19,7 @@
   </div>
 </ng-template>
 
-<div id="preloader" *ngIf="!training">
+<div id="preloader" *ngIf="!training || !comments">
   <svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
        preserveAspectRatio="xMidYMid" class="d-block mx-auto lds-double-ring"
        style="animation-play-state: running; animation-delay: 0s; background: none;">
@@ -40,7 +40,7 @@
     </circle>
   </svg>
 </div>
-<div *ngIf="training" class="row">
+<div *ngIf="training && comments" class="row">
   <div class="col-md-8">
     <h1 class="mt-4">{{ training.name }}</h1>
     <hr>

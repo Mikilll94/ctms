@@ -1,4 +1,6 @@
-export class Comment {
+import {IComment} from './icomment';
+
+export class Comment implements IComment{
   id: number;
   author: string;
   trainingId: number;

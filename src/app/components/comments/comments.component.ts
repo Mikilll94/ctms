@@ -22,7 +22,9 @@ export class CommentsComponent implements OnInit {
   addNewComment(content) {
     this.commentAdded = true;
     const id = +this.route.snapshot.paramMap.get('id');
-    this.commentService.addComment(new Comment('Unknown', id, content, Date.now()))
-      .subscribe(comment => this.comments.unshift(comment));
+    this.commentService.addComment(new Comment('Gall Anonim', id, content, Date.now()))
+      .subscribe(comment => {
+        this.comments.unshift(comment);
+      });
   }
 }
