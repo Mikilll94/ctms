@@ -29,40 +29,38 @@
       </button>
     </p>
     <div class="mb-4" [ngbCollapse]="isCollapsed">
-      <div class="card card-body search-card">
-        <form class="form-group form-inline">
-          <label class="offset-sm-3 col-sm-2" for="search-training-name">Nazwa szkolenia</label>
+      <form>
+        <div class="form-group text-center offset-4 col-4">
+          <label for="search-training-name">Nazwa szkolenia</label>
           <input type="text" name="name-filter" [(ngModel)]="nameFilter" (input)="updateFilters()"
-                 class="col-sm-4 form-control" id="search-training-name">
-        </form>
-        <form>
-          <div class="form-group text-center">
-            <label>Data szkolenia</label>
-          </div>
-          <div class="d-flex justify-content-around form-group form-inline">
-            <label>Od</label>
-            <input type="date" name="date-from-filter" [(ngModel)]="dateFromFilter" (input)="updateFilters()"
-                   class="form-control" id="search-training-date-from">
-            <label class="">Do</label>
-            <input type="date" name="date-to-filter" [(ngModel)]="dateToFilter" (input)="updateFilters()"
-                   class="form-control" id="search-training-date-to">
-          </div>
-        </form>
-      </div>
+                 class="form-control" id="search-training-name">
+        </div>
+        <div class="form-group text-center">
+          <label>Data szkolenia</label>
+        </div>
+        <div class="d-flex justify-content-around form-group form-inline">
+          <label>Od</label>
+          <input type="date" name="date-from-filter" [(ngModel)]="dateFromFilter" (input)="updateFilters()"
+                 class="form-control" id="search-training-date-from">
+          <label class="">Do</label>
+          <input type="date" name="date-to-filter" [(ngModel)]="dateToFilter" (input)="updateFilters()"
+                 class="form-control" id="search-training-date-to">
+        </div>
+      </form>
     </div>
-    <div class="row">
-      <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a routerLink="/szczegoly/{{ training.id }}">
-            <img class="card-img-top" src="http://placehold.it/700x400">
-          </a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">{{ training.name }}</a>
-            </h4>
-            <h6>Data szkolenia: {{training.date}}</h6>
-            <p class="card-text">{{ training.shortDescription }}</p>
-          </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let training of trainings" class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <a routerLink="/szczegoly/{{ training.id }}">
+          <img class="card-img-top" src="http://placehold.it/700x400">
+        </a>
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="#">{{ training.name }}</a>
+          </h4>
+          <h6>Data szkolenia: {{training.date}}</h6>
+          <p class="card-text">{{ training.shortDescription }}</p>
         </div>
       </div>
     </div>
