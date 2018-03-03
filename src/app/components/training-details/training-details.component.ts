@@ -23,7 +23,7 @@ export class TrainingDetailsComponent implements OnInit {
   };
   training: Training;
   comments: Comment[];
-  usersEnrolled = [];
+  usersEnrolled;
   editMode = false;
   rateSubmitted = false;
   total: number;
@@ -58,12 +58,21 @@ export class TrainingDetailsComponent implements OnInit {
 
   getUsersEnrolled() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.userService.getUsersEnrolled(id).subscribe(users => {
-      for(let i = 0; i < users.length; ++i) {
-        this.userService.getUser(users[i]).subscribe(user => {
-          this.usersEnrolled.push(user);
-        });
-      }
+    this.userService.getUsersEnrolled(id).map(users => {
+      const usersRaturned = [];
+        for(let i = 0; i < users.length; ++i) {
+          console.log(i);
+          this.userService.getUser(users[i]).subscribe(user => {
+            console.log("USER", user);
+            usersRaturned.push(user);
+            console.log("USERS RETURNED", usersRaturned);
+          });
+        }
+        return usersRaturned;
+    }).subscribe(users => {
+      console.log("USERS ENROLLED", this.usersEnrolled);
+      this.usersEnrolled = users;
+      console.log("USERS ENROLLED", this.usersEnrolled);
     });
   }
 
