@@ -5,6 +5,8 @@ import {ActivatedRoute} from '@angular/router';
 import {TrainingService} from '../../services/training.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {CommentService} from '../../services/comment.service';
+import {User} from '../../models/user';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-training-details',
@@ -21,18 +23,21 @@ export class TrainingDetailsComponent implements OnInit {
   };
   training: Training;
   comments: Comment[];
+  usersEnrolled = [];
   editMode = false;
   rateSubmitted = false;
   total: number;
   submittedRate: number;
 
   constructor(private route: ActivatedRoute, private modalService: NgbModal,
-              private trainingService: TrainingService, private commentService: CommentService) {
+              private trainingService: TrainingService, private commentService: CommentService,
+              private userService: UserService) {
   }
 
   ngOnInit() {
     this.getTraining();
     this.getComments();
+    this.getUsersEnrolled();
   }
 
   getTraining(): void {
@@ -49,6 +54,17 @@ export class TrainingDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.commentService.getComments(id)
       .subscribe(comments => this.comments = comments);
+  }
+
+  getUsersEnrolled() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.userService.getUsersEnrolled(id).subscribe(users => {
+      for(let i = 0; i < users.length; ++i) {
+        this.userService.getUser(users[i]).subscribe(user => {
+          this.usersEnrolled.push(user);
+        });
+      }
+    });
   }
 
   giveRate() {

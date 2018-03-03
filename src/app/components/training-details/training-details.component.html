@@ -19,7 +19,7 @@
   </div>
 </ng-template>
 
-<div id="preloader" *ngIf="!training || !comments">
+<div id="preloader" *ngIf="!training || !comments || !usersEnrolled">
   <svg width="200px" height="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
        preserveAspectRatio="xMidYMid" class="d-block mx-auto lds-double-ring"
        style="animation-play-state: running; animation-delay: 0s; background: none;">
@@ -40,13 +40,13 @@
     </circle>
   </svg>
 </div>
-<div *ngIf="training && comments" class="row">
+<div *ngIf="training && comments && usersEnrolled" class="row">
   <div class="col-md-8">
     <h1 class="mt-4">{{ training.name }}</h1>
     <hr>
     <p>Data szkolenia: {{training.date}}</p>
     <hr>
-    <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+    <img class="img-fluid rounded" src="http://placehold.it/900x300">
     <hr>
     <p class="lead">{{ training.shortDescription }}</p>
     <p>{{ training.description }}</p>
@@ -57,40 +57,12 @@
   <div class="col-md-4">
     <div class="card my-4">
       <h5 class="card-header text-center">Lista uczestników</h5>
-      <div class="participants-gallery d-flex flex-wrap text-center">
-        <div class="col-4 col-sm-3 col-md-6 col-lg-4 participant-gallery-item">
+      <div *ngIf="usersEnrolled" class="participants-gallery d-flex flex-wrap text-center">
+        <div *ngFor="let user of usersEnrolled" class="col-4 col-sm-3 col-md-6 col-lg-4 participant-gallery-item">
           <img src="http://via.placeholder.com/70x70">
           <div class="participant-name">
-            <div>Mikołaj</div>
-            <div>Waśniewski</div>
-          </div>
-        </div>
-        <div class="col-4 col-xs-3 col-sm-3 col-md-6 col-lg-4">
-          <img src="http://via.placeholder.com/70x70">
-          <div class="participant-name">
-            <div>Adam</div>
-            <div>Mickiewicz</div>
-          </div>
-        </div>
-        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
-          <img src="http://via.placeholder.com/70x70">
-          <div class="participant-name">
-            <div>Juliusz</div>
-            <div>Słowacki</div>
-          </div>
-        </div>
-        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
-          <img src="http://via.placeholder.com/70x70">
-          <div class="participant-name">
-            <div>Jan</div>
-            <div>Kowalski</div>
-          </div>
-        </div>
-        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
-          <img src="http://via.placeholder.com/70x70">
-          <div class="participant-name">
-            <div>Anna</div>
-            <div>Nowak</div>
+            <div>{{user.firstName}}</div>
+            <div>{{user.lastName}}</div>
           </div>
         </div>
       </div>
