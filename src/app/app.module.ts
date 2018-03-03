@@ -15,6 +15,7 @@ import {CommentsComponent} from './components/comments/comments.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {CommentService} from './services/comment.service';
 import {UserService} from './services/user.service';
+import {EnrollmentService} from './services/enrollment.service';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import {UserService} from './services/user.service';
     ),
     NgbModule.forRoot()
   ],
-  providers: [TrainingService, CommentService, UserService],
+  providers: [TrainingService, CommentService, UserService, EnrollmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,14 +1,12 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Training} from '../../models/training';
 import {Comment} from '../../models/comment';
 import {ActivatedRoute} from '@angular/router';
-import {TrainingService} from '../../services/training.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {TrainingService} from '../../services/training.service';
 import {CommentService} from '../../services/comment.service';
-import {User} from '../../models/user';
-import {UserService} from '../../services/user.service';
+import {EnrollmentService} from '../../services/enrollment.service';
 import 'rxjs/add/operator/mergeMap';
-import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 
 @Component({
@@ -34,7 +32,7 @@ export class TrainingDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private modalService: NgbModal,
               private trainingService: TrainingService, private commentService: CommentService,
-              private userService: UserService) {
+              private enrollmentService: EnrollmentService) {
   }
 
   ngOnInit() {
@@ -61,7 +59,7 @@ export class TrainingDetailsComponent implements OnInit {
 
   getUsersEnrolled() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.userService.getUsersEnrolled(id)
+    this.enrollmentService.getUsersEnrolled(id)
       .subscribe(users => this.usersEnrolled = users);
   }
 
