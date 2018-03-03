@@ -4,6 +4,7 @@ export class Training {
   date: string;
   shortDescription: string;
   description: string;
+  image: string;
   rateOne: number;
   rateTwo: number;
   rateThree: number;

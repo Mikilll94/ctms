@@ -8,13 +8,14 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Szkolenie z zakresu BHP',
         date: '2018-04-01',
         shortDescription: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy.',
-        description: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy. Bardzo istotne jest, aby zarówno pracodawcy jak i pracownicy mieli świadomość niebezpieczeństw , które mogą pojawić się podczas wykonywania codziennych obowiązków.\n' +
+        description: 'Dlaczego szkolenia BHP są niezbędne dla Twojej firmy? Zgodnie z Kodeksem Pracy na każdej polskiej firmie spoczywa obowiązek zaznajomienia pracownika, który nie posiada wiedzy i kwalifikacji, z przepisami z zakresu bezpieczeństwa i higieny pracy. Bardzo istotne jest, aby zarówno pracodawcy jak i pracownicy mieli świadomość niebezpieczeństw, które mogą pojawić się podczas wykonywania codziennych obowiązków.\n' +
         '\n' +
         'Dopilnowanie obowiązku szkoleń BHP spoczywa na pracodawcy. Gdy nie dostosuje się on do odgórnych zaleceń, odpowiedzialność za wszelkie wypadki w miejscu pracy i ich skutki ponosi pracodawca. W konsekwencji firma może popaść w poważne problemy finansowe.\n' +
         '\n' +
         'Celem szkolenia BHP jest wpojenie pracownikom zasad organizacji bezpiecznego miejsca pracy oraz zminimalizowanie zagrożeń z nią związanych, a także uniknięcie nieprzyjemnych skutków prawno-finansowych związanych z niedotrzymaniem obowiązku.\n' +
         '\n' +
         'Szkolenia BHP Center chronią Twoją firmę i pracowników.',
+        image: 'bhp.jpg',
         rateOne: 5,
         rateTwo: 3,
         rateThree: 1,
@@ -26,7 +27,11 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Zarządzanie projektami',
         date: '2018-06-03',
         shortDescription: 'Szkolenie z zarządzania zespołem dla menedżerów, kierowników, właścicieli firm, kadr zarządzających i osób aspirujących na stanowiska kierownicze.',
-        description: 'Warsztat zakłada naukę przez doświadczenie. Nagrywamy na kamerę przykładowe sytuacje szefowskie. Ich wspólna analiza pozwala na wypracowanie efektywnych narzędzi komunikacyjnych menedżera. Zwieńczeniem jest trening nowych umiejętności ze wsparciem trenerów. Indywidualne ćwiczenia umożliwiają dostosowanie narzędzi do realiów uczestników.',
+        description: 'Z projektami mamy do czynienia codziennie, gdyż projekty to sposób na osiągnięcie zamierzonych celów. Projekt realizujemy budując dom, wprowadzając nowy produkt na rynek lub otwierając nowy oddział firmy. Bez względu na to, czy są to duże przedsięwzięcia, czy też złożone operacje, projekt to wysiłek podejmowany z myślą o realizacji celu w ograniczonym czasie i przy skończonych zasobach.\n' +
+        '\n' +
+        'Szkolenie z Podstaw Zarządzania Projektami prezentuje podstawy najlepszych, sprawdzonych metod zarządzania projektami, które w znacznej mierze ułatwiają prowadzenie projektu, zwiększając szanse na osiągnięcie sukcesu i założonego celu, a także pomagają w kontrolowany sposób prowadzić projekt. Szkolenie to jest propozycją dla osób zarówno realizujących projekty, jak również dla osób bez doświadczenia, które dopiero przygotowują się do zarządzania swoim pierwszym przedsięwzięciem. Jednocześnie szkolenie to jest dobrą propozycja dla osób, które chcą zajmować się lub zajmują się zawodowo zarządzaniem projektami i w planie mają poznanie bardziej zaawansowanych metodyk, sposobów i standardów zarządzania projektami takich jak PRINCE2, PMI/PMBoK czy IPMA.\n' +
+        '\n',
+        image: 'project_management.jpg',
         rateOne: 2,
         rateTwo: 1,
         rateThree: 4,
@@ -35,13 +40,15 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 3,
-        name: 'Kurs samoobrony - Krav Maga',
+        name: 'Web components',
         date: '2018-04-12',
-        shortDescription: 'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie.',
+        shortDescription: 'Na szkoleniu bardzo szybko nauczysz się tworzyć własne komponenty webowe. \n' +
+        'Dowiesz się czym są "Web Components" oraz jak zacząć używać technologii wchodzących w ich skład już dzisiaj. Stworzysz również aplikację internetową, dzięki której usystematyzujesz wiedzę w kontekście rzeczywistego projektu.',
         description: '\n' +
         'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie. \n' +
         '\n' +
         'Krav maga jest najskuteczniejszym systemem samoobrony i walki wręcz. Bazuje na naturalnych odruchach przez co nauka jest bardzo szybka. System ten łączy różne sztuki walki a z każdego z nich bierze najskuteczniejsze techniki.',
+        image: 'web_components.svg',
         rateOne: 3,
         rateTwo: 1,
         rateThree: 2,
@@ -52,8 +59,9 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 4,
         name: 'Szkolenie z Big Data',
         date: '2018-07-20',
-        shortDescription: 'Przykładowy opis 4',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Uczestnik będzie posiadał ugruntowaną wiedzę dotyczącą statystycznej analizy danych i uczenia maszynowego (również deep learning), popartą realnymi projektami zrealizowanymi w trakcie zajęć.',
+        description: 'W branży finansowej "badacz danych" analizuje dane o transakcjach bankowych i wspomaga podejmowanie decyzji kredytowych, np. wykrywanie nadużyć (fraud detection) umożliwia zidentyfikowanie najbardziej podejrzanych operacji i przekazanie ich do dalszej analizy. W marketingu analizuje zachowania użytkowników na stronach internetowych, np. sklepów online. Pozwala to między innymi na tworzenie coraz doskonalszych systemów rekomendacyjnych, wskazujących klientowi produkty, które z dużym prawdopodobieństwem jest skłonny kupić, nawet jeśli ich aktywnie nie szuka. Innym obszarem jest śledzenie widoczności i opinii o marce w Internecie. W sprzedaży Data Scientist analizuje dane, co umożliwia przewidywanie trendów sprzedażowych, czy segmentację klientów. Pozwala to na podejmowanie decyzji wpływających na strategię firmy w zakresie oferty produktowej, czy funkcjonowanie działu handlowego. Więcej na temat zawodu badacza danych znajdziesz na naszym blogu.',
+        image: 'big_data.jpg',
         rateOne: 4,
         rateTwo: 3,
         rateThree: 6,
@@ -62,10 +70,11 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 5,
-        name: 'Przyspieszony kurs Pythona',
+        name: 'Kurs Pythona',
         date: '2018-10-24',
         shortDescription: 'Przykładowy opis 5',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        image: 'python.jpg',
         rateOne: 2,
         rateTwo: 3,
         rateThree: 4,
@@ -74,10 +83,11 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 6,
-        name: 'Zarządzanie projektami od zera',
+        name: 'Kurs C++',
         date: '2018-11-30',
-        shortDescription: 'Przykładowy opis 6',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Język C++ wykorzystywany jest do tworzenia różnorodnych aplikacji od systemów operacyjnych po gry komputerowe.',
+        description: 'Język C++ wykorzystywany jest do tworzenia różnorodnych aplikacji od systemów operacyjnych po gry komputerowe. Programista C++ działający w obszarze Internetu Rzeczy (IoT) może zajmowac się m.in. budowaniem rozwiązań wykorzystujących niewielkie komputery oraz różnorodne czujniki, na przykład prezentujące temperaturę oraz czas na tablicach świetlnych w mieście, prezentujących trasę przejazdu w autobusie czy zapowiedzi głosowe przystanków. C++ Developer zajmuje się także tworzeniem i oprogramowaniem urządzeń ułatwiających codzienne życie na przykład dla inteligentnych budynków. Mogą one wchodzić w interakcję z użytkownikiem rozumiejąc jego polecenia (zamiana mowy na tekst, interpretacja polecenia) oraz wykonywać zlecone zadania (na przykład udzielenie informacji o aktualnej pogodzie, włączenie światła w mieszkaniu, podniesienie żaluzji czy włączenie klimatyzacji).',
+        image: 'cpp.png',
         rateOne: 2,
         rateTwo: 4,
         rateThree: 2,
@@ -86,10 +96,11 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 7,
-        name: 'Praktyczny Javascript',
+        name: 'Zaawansowany Javascript',
         date: '2017-01-04',
-        shortDescription: 'Przykładowy opis 7',
+        shortDescription: 'Szkolenie przeznaczone jest dla programistów i projektantów JavaScript pragnących poszerzyć swoje umiejętności o zagadnienia zaawansowane, popularne biblioteki, wzorce, najlepsze praktyki i architektury.',
         description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        image: 'advanced_javascript.png',
         rateOne: 4,
         rateTwo: 2,
         rateThree: 3,
@@ -98,10 +109,22 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 8,
-        name: 'Database performance',
+        name: 'Wydajność baz danych',
         date: '2017-06-23',
-        shortDescription: 'Przykładowy opis 8',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Pragniemy zaoferować Państwu kompletny pakiet szkoleń autorskich dotyczący technologii Baz Danych Oracle. Został on zaplanowany na podstawie naszych wieloletnich doświadczeń merytorycznych i dydaktycznych',
+        description: 'Kim jesteśmy\n' +
+        'Jesteśmy zespołem specjalistów i instruktorów zajmujących się od kilkunastu lat szkoleniami z zakresu Baz Danych Oracle. Dzięki bogatemu doświadczeniu zdobytemu przy realizacji dużych projektów informatycznych i edukacyjnych oraz zdolnościom dydaktycznym, możemy się pochwalić najlepszą w Polsce grupą certyfikowanych trenerów, którzy gotowi są do przekazania Państwu swojej bogatej, praktycznej wiedzy w trakcie przygotowanych przez nas szkoleń autorskich.\n' +
+        '\n' +
+        'Co oferujemy\n' +
+        'Pragniemy zaoferować Państwu kompletny pakiet szkoleń autorskich dotyczący technologii Baz Danych Oracle. Został on zaplanowany na podstawie naszych wieloletnich doświadczeń merytorycznych i dydaktycznych w taki sposób, aby zapewnić uczestnikom pełne spektrum wiedzy na temat Bazy Danych Oracle w każdym obszarze potrzebnym Programistom, Projektantom, Administratorom aplikacji i Użytkownikom końcowym [oferta poniżej].\n' +
+        'Oprócz standardowych szkoleń z oferty jesteśmy w stanie dostarczyć każdą inną wiedzę o bazach danych Oracle. Przygotujemy szkolenia dedykowane, których program zostanie ustalony w trakcie analizy Państwa potrzeb.\n' +
+        '\n' +
+        'Skąd się wzięliśmy\n' +
+        'Zespoły realizatorskie to instruktorzy, którzy wiele lat pracowali w zespołach projektowych czołowych firm z branży IT, zdobywając wiedzę merytoryczną oraz praktyczne doświadczenia. Następnie wykorzystując swoje zdolności dydaktyczne związali się z firmami edukacyjnymi oferując własne szkolenia oraz prowadząc szkolenia autoryzowane przez Oracle.\n' +
+        '\n' +
+        'Nasze cele\n' +
+        'Dotychczasowe opinie zebrane od wielu tysięcy osobiście przeszkolonych w wielu firmach osób upoważniają nas do twierdzenia, że szkolenia prowadzone przez nas są najlepsze na polskim rynku. Niemniej pragniemy skonsolidować nasze dotychczasowe działania, aby jeszcze lepiej sprostać wyzwaniom, jakie będą stawiać przed nami klienci. To Państwa zadowolenie, referencje i chęć powrotu na kolejne szkolenia jest dla nas najważniejsza.',
+        image: 'database_performance.png',
         rateOne: 4,
         rateTwo: 3,
         rateThree: 5,
@@ -110,10 +133,18 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 9,
-        name: 'Zarządzanie jakością w przedsiębiorstwie',
+        name: 'Kontrola jakości',
         date: '2017-02-12',
-        shortDescription: 'Przykładowy opis 9',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Kontrola jakości jest nieodłącznym elementem towarzyszącym zasadom organizacji w większości przedsiębiorstw. ',
+        description: 'Kontrola jakości jest nieodłącznym elementem towarzyszącym zasadom organizacji w większości przedsiębiorstw. Potocznie, kontrola jakości postrzegana jest jako prosty proces, związany z eliminowaniem produktów niezgodnych i zatrzymywaniem ich przed dostarczeniem do klienta. Należy jednak podkreślić, iż w nowocześnie zarządzanym przedsiębiorstwie, kontrola jakości nie ma już wiele wspólnego z brakarstwem. Cena szkolenia obejmuje: \n' +
+        '- udział w szkoleniu, \n' +
+        '- materiały w formie papierowej, segregator, notatnik, długopis\n' +
+        '- bezpłatny dostęp do elektronicznych materiałów szkoleniowych w systemie Biblioteka TQMsoft,  \n' +
+        '- certyfikat uczestnictwa w szkoleniu, \n' +
+        '- możliwość bezpłatnych 3-miesięcznych konsultacji po szkoleniu, które realizowane są poprzez Panel Konsultacyjny, \n' +
+        '- obiady, przerwy kawowe oraz słodki poczęstunek, \n' +
+        '- na życzenie - pomoc w rezerwacji hotelu',
+        image: 'quality_control.jpg',
         rateOne: 5,
         rateTwo: 4,
         rateThree: 1,
@@ -122,10 +153,20 @@ export class InMemoryDataService implements InMemoryDbService {
       },
       {
         id: 10,
-        name: 'Scala w praktyce',
+        name: 'Scala - programowanie obiektowo-funkcyjne',
         date: '2017-01-17',
-        shortDescription: 'Przykładowy opis 10',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Szkolenie zostało opracowane z myślą o uczestnikach posiadających doświadczenie programistyczne w językach wywodzących się z C++ (Java, C#, PHP).',
+        description: '\n' +
+        'Szkolenie zostało opracowane z myślą o uczestnikach posiadających doświadczenie programistyczne w językach wywodzących się z C++ (Java, C#, PHP).\n' +
+        '\n' +
+        'Podczas szkolenia nie poruszamy nieistotnych zagadnień, które rozpraszają początkujących\n' +
+        '\n' +
+        'Skupiamy się na technikach przygotowujących do tworzenia aplikacji enterprise/webowych.\n' +
+        '\n' +
+        'Podczas szkolenia w naturalny sposób zostały plecione narzędzia codziennej pracy oraz najlepsze praktyki tworzenia czytelnego, rozszerzalnego i testowalnego kodu.\n' +
+        '\n' +
+        'Program został rozszerzony o najbardziej popularne frameworki: Testowanie, DSL, REST, Web.',
+        image: 'scala.png',
         rateOne: 3,
         rateTwo: 5,
         rateThree: 2,
