@@ -3,5 +3,5 @@ export interface IComment {
   author: string;
   trainingId: number;
   content: string;
-  postingDate: number;
+  postingDate: Date;
 }

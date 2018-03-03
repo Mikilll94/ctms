@@ -19,7 +19,7 @@ export class CommentService {
     return this.http.get<any[]>(`${this.commentsUrl}?trainingId=${trainingId}`)
       .map((comments) => {
         comments.sort((a, b) => {
-          return Date.parse(a.postingDate) < Date.parse(b.postingDate) ? -1 : 1;
+          return Date.parse(a.postingDate) > Date.parse(b.postingDate) ? -1 : 1;
         });
         return comments;
       });
