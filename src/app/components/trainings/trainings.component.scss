@@ -11,4 +11,14 @@
     border-radius: 15px;
     border-color: #000000;
   }
+
+  .date-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      margin-right: 5%;
+    }
+  }
 }
