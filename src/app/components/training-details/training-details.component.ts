@@ -62,15 +62,7 @@ export class TrainingDetailsComponent implements OnInit {
   getUsersEnrolled() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.userService.getUsersEnrolled(id)
-      .flatMap(users => {
-        return Observable.forkJoin(
-          users.map(user => {
-            return this.userService.getUser(user);
-          })
-        );
-      }).subscribe(users => {
-      this.usersEnrolled = users;
-    });
+      .subscribe(users => this.usersEnrolled = users);
   }
 
   giveRate() {

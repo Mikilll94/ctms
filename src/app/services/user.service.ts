@@ -13,7 +13,13 @@ export class UserService {
 
   getUsersEnrolled(trainingId: number): Observable<any[]> {
     return this.http.get<any[]>(`${this.enrollmentsUrl}?trainingId=${trainingId}`)
-      .map(users => users.map(user => user.userId));
+      .flatMap(users => {
+        return Observable.forkJoin(
+          users.map(user => {
+            return this.getUser(user.id);
+          })
+        );
+      });
   }
 
   getUser(userId: number): Observable<any> {
