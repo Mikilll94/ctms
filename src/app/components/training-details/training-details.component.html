@@ -57,98 +57,127 @@
   <div class="col-md-4">
     <div class="card my-4">
       <h5 class="card-header text-center">Lista uczestników</h5>
-      <div class="card-body">
-        <ul>
-          <li>Mikołaj Waśniewski</li>
-          <li>Anna Nowak</li>
-          <li>Jacek Pawlak</li>
-        </ul>
+      <div class="participants-gallery d-flex flex-wrap text-center">
+        <div class="col-4 col-sm-3 col-md-6 col-lg-4 participant-gallery-item">
+          <img src="http://via.placeholder.com/70x70">
+          <div class="participant-name">
+            <div>Mikołaj</div>
+            <div>Waśniewski</div>
+          </div>
+        </div>
+        <div class="col-4 col-xs-3 col-sm-3 col-md-6 col-lg-4">
+          <img src="http://via.placeholder.com/70x70">
+          <div class="participant-name">
+            <div>Adam</div>
+            <div>Mickiewicz</div>
+          </div>
+        </div>
+        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
+          <img src="http://via.placeholder.com/70x70">
+          <div class="participant-name">
+            <div>Juliusz</div>
+            <div>Słowacki</div>
+          </div>
+        </div>
+        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
+          <img src="http://via.placeholder.com/70x70">
+          <div class="participant-name">
+            <div>Jan</div>
+            <div>Kowalski</div>
+          </div>
+        </div>
+        <div class="col-4 col-sm-3 col-md-6 col-lg-4">
+          <img src="http://via.placeholder.com/70x70">
+          <div class="participant-name">
+            <div>Anna</div>
+            <div>Nowak</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card my-4 text-center">
-      <h5 class="card-header">Oceny użytkowników</h5>
-      <div class="card-body">
-        <div>
-          <p>
-            <ngb-progressbar type="success" [value]="100 * training.rateFive/total">{{training.rateFive}}
-            </ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="info" [value]="100 * training.rateFour/total">{{training.rateFour}}
-            </ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="primary" [value]="100 * training.rateThree/total">{{training.rateThree}}
-            </ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="warning" [value]="100 * training.rateTwo/total">{{training.rateTwo}}
-            </ngb-progressbar>
-          </p>
-          <p>
-            <ngb-progressbar type="danger" [value]="100 * training.rateOne/total">{{training.rateOne}}
-            </ngb-progressbar>
-          </p>
-        </div>
-        <div *ngIf="!rateSubmitted">
-          <div class="form-group">
-            <ngb-rating [(rate)]="submittedRate" *ngIf="editMode" max="5"></ngb-rating>
+      <div class="card my-4 text-center">
+        <h5 class="card-header">Oceny użytkowników</h5>
+        <div class="card-body">
+          <div>
+            <p>
+              <ngb-progressbar type="success" [value]="100 * training.rateFive/total">{{training.rateFive}}
+              </ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="info" [value]="100 * training.rateFour/total">{{training.rateFour}}
+              </ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="primary" [value]="100 * training.rateThree/total">{{training.rateThree}}
+              </ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="warning" [value]="100 * training.rateTwo/total">{{training.rateTwo}}
+              </ngb-progressbar>
+            </p>
+            <p>
+              <ngb-progressbar type="danger" [value]="100 * training.rateOne/total">{{training.rateOne}}
+              </ngb-progressbar>
+            </p>
           </div>
-          <div class="form-group">
-            <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
-            <button *ngIf="editMode" (click)="submitRate()" class="btn btn-primary">Zatwierdź</button>
+          <div *ngIf="!rateSubmitted">
+            <div class="form-group">
+              <ngb-rating [(rate)]="submittedRate" *ngIf="editMode" max="5"></ngb-rating>
+            </div>
+            <div class="form-group">
+              <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
+              <button *ngIf="editMode" (click)="submitRate()" class="btn btn-primary">Zatwierdź</button>
+            </div>
           </div>
-        </div>
-        <div *ngIf="rateSubmitted">
+          <div *ngIf="rateSubmitted">
             Dziękujemy za opinię.
           </div>
-      </div>
-    </div>
-    <div class="card my-4 text-center">
-      <h5 class="card-header">Zapisy</h5>
-      <div class="card-body">
-        <div class="form-group d-flex flex-column align-items-center">
-          <div>Pozostało jeszcze</div>
-          <h2>10</h2>
-          <div>wolnych miejsc.</div>
-        </div>
-        <div class="form-group">
-          <button (click)="signForTraining(signupPopup)" class="btn btn-primary">Zapisz się na to szkolenie</button>
         </div>
       </div>
-    </div>
-    <div class="card my-4">
-      <h5 class="card-header text-center">Tagi</h5>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-6">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#">Web Design</a>
-              </li>
-              <li>
-                <a href="#">HTML</a>
-              </li>
-              <li>
-                <a href="#">Freebies</a>
-              </li>
-            </ul>
+      <div class="card my-4 text-center">
+        <h5 class="card-header">Zapisy</h5>
+        <div class="card-body">
+          <div class="form-group d-flex flex-column align-items-center">
+            <div>Pozostało jeszcze</div>
+            <h2>10</h2>
+            <div>wolnych miejsc.</div>
           </div>
-          <div class="col-lg-6">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#">JavaScript</a>
-              </li>
-              <li>
-                <a href="#">CSS</a>
-              </li>
-              <li>
-                <a href="#">Tutorials</a>
-              </li>
-            </ul>
+          <div class="form-group">
+            <button (click)="signForTraining(signupPopup)" class="btn btn-primary">Zapisz się na to szkolenie</button>
+          </div>
+        </div>
+      </div>
+      <div class="card my-4">
+        <h5 class="card-header text-center">Tagi</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">Web Design</a>
+                </li>
+                <li>
+                  <a href="#">HTML</a>
+                </li>
+                <li>
+                  <a href="#">Freebies</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">JavaScript</a>
+                </li>
+                <li>
+                  <a href="#">CSS</a>
+                </li>
+                <li>
+                  <a href="#">Tutorials</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

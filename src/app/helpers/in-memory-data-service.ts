@@ -162,6 +162,13 @@ export class InMemoryDataService implements InMemoryDbService {
         trainingDd: 3,
       }
     ];
+    const users = [
+      {id: 1, firstName: 'Mikołaj', lastName: 'Waśniewski'},
+      {id: 2, firstName: 'Jan', lastName: 'Kowalski'},
+      {id: 3, firstName: 'Anna', lastName: 'Nowak'},
+      {id: 4, firstName: 'Adam', lastName: 'Mickiewicz'},
+      {id: 5, firstName: 'Juliusz', lastName: 'Słowacki'},
+    ];
     return {trainings, comments};
   }
 }
