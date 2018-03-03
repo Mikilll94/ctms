@@ -23,6 +23,7 @@ export class TrainingDetailsComponent implements OnInit {
     5: 'rateFive',
   };
   training: Training;
+  trainingId =  +this.route.snapshot.paramMap.get('id');
   comments: Comment[];
   usersEnrolled;
   editMode = false;
@@ -42,8 +43,7 @@ export class TrainingDetailsComponent implements OnInit {
   }
 
   getTraining(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.trainingService.getTraining(id)
+    this.trainingService.getTraining(this.trainingId)
       .subscribe(training => {
         this.training = training;
         this.total = training.rateOne + training.rateTwo +
@@ -52,14 +52,12 @@ export class TrainingDetailsComponent implements OnInit {
   }
 
   getComments() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.commentService.getComments(id)
+    this.commentService.getComments(this.trainingId)
       .subscribe(comments => this.comments = comments);
   }
 
   getUsersEnrolled() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.enrollmentService.getUsersEnrolled(id)
+    this.enrollmentService.getUsersEnrolled(this.trainingId)
       .subscribe(users => this.usersEnrolled = users);
   }
 
