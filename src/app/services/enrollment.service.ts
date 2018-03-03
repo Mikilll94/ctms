@@ -15,7 +15,7 @@ export class EnrollmentService {
   getUsersEnrolled(trainingId: number): Observable<any[]> {
     return this.http.get<any[]>(`${this.enrollmentsUrl}?trainingId=${trainingId}`)
       .flatMap(enrollments => {
-        if (!enrollments.length) return Observable.of([]);
+        if (!enrollments.length) { return Observable.of([]); }
         return Observable.forkJoin(
           enrollments.map(enrollment => {
             return this.userService.getUser(enrollment.userId);
