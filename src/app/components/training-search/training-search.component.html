@@ -2,7 +2,7 @@
   <button *ngIf="!loadingTrainings" type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed">
     Wyszukaj szkolenia
   </button>
-  <button *ngIf="loadingTrainings" type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed">
+  <button *ngIf="loadingTrainings" type="button" class="btn btn-danger" (click)="isCollapsed = !isCollapsed">
     Proszę czekać...
   </button>
 </p>
