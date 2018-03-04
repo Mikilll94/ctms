@@ -1,27 +1,32 @@
 <h5 class="card-header">Oceny użytkowników ({{total}})</h5>
 <div class="card-body">
-  <div>
+  <div class="progress-bar-container">
     <p>
+      <span class="progress-bar-label float-left">5&#x2605;</span>
       <ngb-progressbar type="success" [value]="100 * training.rateFive/total">
         {{training.rateFive}}
       </ngb-progressbar>
     </p>
     <p>
+      <span class="progress-bar-label float-left">4&#x2605;</span>
       <ngb-progressbar type="info" [value]="100 * training.rateFour/total">
         {{training.rateFour}}
       </ngb-progressbar>
     </p>
     <p>
+      <span class="progress-bar-label float-left">3&#x2605;</span>
       <ngb-progressbar type="primary" [value]="100 * training.rateThree/total">
         {{training.rateThree}}
       </ngb-progressbar>
     </p>
     <p>
+      <span class="progress-bar-label float-left">2&#x2605;</span>
       <ngb-progressbar type="warning" [value]="100 * training.rateTwo/total">
         {{training.rateTwo}}
       </ngb-progressbar>
     </p>
     <p>
+      <span class="progress-bar-label float-left">1&#x2605;</span>
       <ngb-progressbar type="danger" [value]="100 * training.rateOne/total">
         {{training.rateOne}}
       </ngb-progressbar>

@@ -9,3 +9,9 @@
 .submit-rate:disabled {
   cursor: not-allowed;
 }
+
+.progress-bar-container .progress-bar-label {
+  position: relative;
+  bottom: 4px;
+  margin-right: 5px;
+}
