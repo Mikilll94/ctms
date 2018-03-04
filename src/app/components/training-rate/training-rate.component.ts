@@ -25,6 +25,10 @@ export class TrainingRateComponent implements OnInit {
   constructor(private trainingService: TrainingService) { }
 
   ngOnInit() {
+    this.computeTotal();
+  }
+
+  computeTotal() {
     this.total = this.training.rateOne + this.training.rateTwo +
       this.training.rateThree + this.training.rateFour + this.training.rateFive;
   }
@@ -36,6 +40,6 @@ export class TrainingRateComponent implements OnInit {
   submitRate() {
     this.rateSubmitted = true;
     this.training[this.rateMapping[this.submittedRate]]++;
-    this.trainingService.updateTraining(this.training).subscribe();
+    this.trainingService.updateTraining(this.training).subscribe(() => this.computeTotal());
   }
 }

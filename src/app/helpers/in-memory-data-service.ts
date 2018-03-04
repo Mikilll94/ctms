@@ -44,10 +44,7 @@ export class InMemoryDataService implements InMemoryDbService {
         date: '2018-04-12',
         shortDescription: 'Na szkoleniu bardzo szybko nauczysz się tworzyć własne komponenty webowe. \n' +
         'Dowiesz się czym są "Web Components" oraz jak zacząć używać technologii wchodzących w ich skład już dzisiaj. Stworzysz również aplikację internetową, dzięki której usystematyzujesz wiedzę w kontekście rzeczywistego projektu.',
-        description: '\n' +
-        'Kursy i szkolenia z samoobrony w systemie krav maga. Zajęcia prowadzi instruktor z międzynarodowymi uprawnieniami Leszek Sady wydanymi przez największą organizację krav maga na świecie. \n' +
-        '\n' +
-        'Krav maga jest najskuteczniejszym systemem samoobrony i walki wręcz. Bazuje na naturalnych odruchach przez co nauka jest bardzo szybka. System ten łączy różne sztuki walki a z każdego z nich bierze najskuteczniejsze techniki.',
+        description: 'Web Components to zbiór kilku świetnych specyfikacji, które w odpowiedni sposób połączone całkowicie zmieniają reguły gry, jeśli chodzi o tworzenie nowoczesnych i skalowalnych witryn oraz aplikacji internetowych. Wiele wskazuje na to, że za jakiś czas, tworzenie wyżej wymienionych będzie jeszcze prostsze, a wszystko to dzięki stworzonym przez społeczność komponentom, które łatwo się ze sobą łączą i nie przyprawiają o ból głowy nawet osoby początkujące. Warto już teraz zainteresować się tematem i być świadkiem rewolucyjnych zmian w branży, które właśnie powoli odbywają się na naszych oczach. W warsztacie tym dowiesz się wszystkiego co jest niezbędne by zrozumieć istotę Web Components, a także zacząć tworzyć własne komponenty!',
         image: 'web_components.svg',
         rateOne: 3,
         rateTwo: 1,
