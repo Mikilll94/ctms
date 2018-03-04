@@ -61,7 +61,7 @@
         </a>
         <div class="card-body">
           <h4 class="card-title">
-            <a href="#">{{ training.name }}</a>
+            <a routerLink="szkolenia/szczegoly/{{ training.id }}">{{ training.name }}</a>
           </h4>
           <h6>Data szkolenia: {{training.date}}</h6>
           <p class="card-text">{{ training.shortDescription }}</p>
