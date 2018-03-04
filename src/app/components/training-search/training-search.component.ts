@@ -1,5 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TrainingService} from '../../services/training.service';
+import {Subject} from 'rxjs/Subject';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-training-search',
@@ -14,15 +18,16 @@ export class TrainingSearchComponent implements OnInit {
   nameFilter;
   dateFromFilter;
   dateToFilter;
+  private nameFilterSubject = new Subject<string>();
+
 
   constructor(private trainingService: TrainingService) {
   }
 
   ngOnInit() {
-  }
-
-  updateFilters() {
-    this.trainingService.getTrainings({name: this.nameFilter})
+    this.nameFilterSubject
+      .debounceTime(300)
+      .switchMap((nameFilter: string) => this.trainingService.getTrainings({name: nameFilter}))
       .map(trainings => trainings.filter(training => {
         if (this.dateFromFilter && this.dateToFilter) {
           return training.date >= this.dateFromFilter && training.date <= this.dateToFilter;
@@ -35,5 +40,9 @@ export class TrainingSearchComponent implements OnInit {
         }
       }))
       .subscribe(trainings => this.filtersUpdated.emit(trainings));
+  }
+
+  updateFilters() {
+    this.nameFilterSubject.next(this.nameFilter);
   }
 }
