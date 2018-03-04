@@ -17,6 +17,7 @@ import {CommentService} from './services/comment.service';
 import {UserService} from './services/user.service';
 import {EnrollmentService} from './services/enrollment.service';
 import { TrainingRateComponent } from './components/training-rate/training-rate.component';
+import { TrainingSearchComponent } from './components/training-search/training-search.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { TrainingRateComponent } from './components/training-rate/training-rate.
     TrainingsComponent,
     CommentsComponent,
     TrainingRateComponent,
+    TrainingSearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,10 +11,6 @@ import 'rxjs/add/operator/map';
 })
 export class TrainingsComponent implements OnInit {
   trainings: Training[];
-  isCollapsed = true;
-  nameFilter;
-  dateFromFilter;
-  dateToFilter;
 
   constructor(private trainingService: TrainingService) {
   }
@@ -28,19 +24,7 @@ export class TrainingsComponent implements OnInit {
     this.getTrainings();
   }
 
-  updateFilters() {
-    this.trainingService.getTrainings({name: this.nameFilter})
-      .map(trainings => trainings.filter(training => {
-        if (this.dateFromFilter && this.dateToFilter) {
-          return training.date >= this.dateFromFilter && training.date <= this.dateToFilter;
-        } else if (this.dateFromFilter) {
-          return training.date >= this.dateFromFilter;
-        } else if (this.dateToFilter) {
-          return training.date <= this.dateToFilter;
-        } else {
-          return true;
-        }
-      }))
-      .subscribe(trainings => this.trainings = trainings);
+  updateFilters(filteredTrainings: Training[]) {
+    this.trainings = filteredTrainings;
   }
 }
