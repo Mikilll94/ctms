@@ -227,10 +227,12 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 2, userId: 1, trainingId: 2},
       {id: 3, userId: 1, trainingId: 3},
       {id: 4, userId: 2, trainingId: 1},
-      {id: 5, userId: 2, trainingId: 3},
+      {id: 5, userId: 5, trainingId: 3},
       {id: 6, userId: 2, trainingId: 5},
       {id: 7, userId: 3, trainingId: 2},
       {id: 8, userId: 4, trainingId: 2},
+      {id: 9, userId: 5, trainingId: 2},
+      {id: 10, userId: 2, trainingId: 2},
     ];
     return {trainings, comments, users, enrollments};
   }

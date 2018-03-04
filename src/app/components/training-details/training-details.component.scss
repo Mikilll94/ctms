@@ -4,11 +4,15 @@
 }
 
 .participant-gallery-item {
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .participant-name {
   text-align: center;
   word-wrap: normal;
   font-size: 15px;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.13);
 }
