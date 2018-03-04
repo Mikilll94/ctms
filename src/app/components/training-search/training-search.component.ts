@@ -18,6 +18,7 @@ export class TrainingSearchComponent implements OnInit {
   nameFilter;
   dateFromFilter;
   dateToFilter;
+  loadingTrainings = false;
   private nameFilterSubject = new Subject<string>();
 
 
@@ -39,10 +40,14 @@ export class TrainingSearchComponent implements OnInit {
           return true;
         }
       }))
-      .subscribe(trainings => this.filtersUpdated.emit(trainings));
+      .subscribe(trainings => {
+        this.filtersUpdated.emit(trainings);
+        this.loadingTrainings = false;
+      });
   }
 
   updateFilters() {
+    this.loadingTrainings = true;
     this.nameFilterSubject.next(this.nameFilter);
   }
 }
