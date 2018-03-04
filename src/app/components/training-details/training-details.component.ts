@@ -15,21 +15,11 @@ import 'rxjs/add/observable/forkJoin';
   styleUrls: ['./training-details.component.scss']
 })
 export class TrainingDetailsComponent implements OnInit {
-  rateMapping = {
-    1: 'rateOne',
-    2: 'rateTwo',
-    3: 'rateThree',
-    4: 'rateFour',
-    5: 'rateFive',
-  };
+
   training: Training;
   trainingId =  +this.route.snapshot.paramMap.get('id');
   comments: Comment[];
   usersEnrolled;
-  editMode = false;
-  rateSubmitted = false;
-  total: number;
-  submittedRate: number;
 
   constructor(private route: ActivatedRoute, private modalService: NgbModal,
               private trainingService: TrainingService, private commentService: CommentService,
@@ -46,8 +36,6 @@ export class TrainingDetailsComponent implements OnInit {
     this.trainingService.getTraining(this.trainingId)
       .subscribe(training => {
         this.training = training;
-        this.total = training.rateOne + training.rateTwo +
-          training.rateThree + training.rateFour + training.rateFive;
       });
   }
 
@@ -59,16 +47,6 @@ export class TrainingDetailsComponent implements OnInit {
   getUsersEnrolled() {
     this.enrollmentService.getUsersEnrolled(this.trainingId)
       .subscribe(users => this.usersEnrolled = users);
-  }
-
-  giveRate() {
-    this.editMode = true;
-  }
-
-  submitRate() {
-    this.rateSubmitted = true;
-    this.training[this.rateMapping[this.submittedRate]]++;
-    this.trainingService.updateTraining(this.training).subscribe();
   }
 
   signForTraining(content) {

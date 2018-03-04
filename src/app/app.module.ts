@@ -16,6 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {CommentService} from './services/comment.service';
 import {UserService} from './services/user.service';
 import {EnrollmentService} from './services/enrollment.service';
+import { TrainingRateComponent } from './components/training-rate/training-rate.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {EnrollmentService} from './services/enrollment.service';
     TrainingDetailsComponent,
     TrainingsComponent,
     CommentsComponent,
+    TrainingRateComponent,
   ],
   imports: [
     BrowserModule,

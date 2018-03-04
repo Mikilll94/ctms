@@ -67,40 +67,7 @@
       <div class="card my-4 text-center">
         <h5 class="card-header">Oceny użytkowników</h5>
         <div class="card-body">
-          <div>
-            <p>
-              <ngb-progressbar type="success" [value]="100 * training.rateFive/total">{{training.rateFive}}
-              </ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="info" [value]="100 * training.rateFour/total">{{training.rateFour}}
-              </ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="primary" [value]="100 * training.rateThree/total">{{training.rateThree}}
-              </ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="warning" [value]="100 * training.rateTwo/total">{{training.rateTwo}}
-              </ngb-progressbar>
-            </p>
-            <p>
-              <ngb-progressbar type="danger" [value]="100 * training.rateOne/total">{{training.rateOne}}
-              </ngb-progressbar>
-            </p>
-          </div>
-          <div *ngIf="!rateSubmitted">
-            <div class="form-group">
-              <ngb-rating [(rate)]="submittedRate" *ngIf="editMode" max="5"></ngb-rating>
-            </div>
-            <div class="form-group">
-              <button *ngIf="!editMode" (click)="giveRate()" class="btn btn-primary">Wystaw ocenę</button>
-              <button *ngIf="editMode" (click)="submitRate()" [disabled]="!submittedRate" class="btn btn-primary">Zatwierdź</button>
-            </div>
-          </div>
-          <div *ngIf="rateSubmitted">
-            Dziękujemy za opinię.
-          </div>
+          <app-training-rate [training]="training"></app-training-rate>
         </div>
       </div>
       <div class="card my-4 text-center">
