@@ -35,7 +35,7 @@
           <input type="text" name="name-filter" [(ngModel)]="nameFilter" (input)="updateFilters()"
                  class="form-control" id="search-training-name">
         </div>
-        <div class="form-group text-center">
+        <div class="text-center">
           <label class="search-label">Data szkolenia</label>
         </div>
         <div class="d-flex form-group form-inline">
@@ -45,7 +45,7 @@
                    class="form-control" id="search-training-date-from">
           </div>
           <div class="col-md-6 date-field">
-            <label class="">Do</label>
+            <label>Do</label>
             <input type="date" name="date-to-filter" [(ngModel)]="dateToFilter" (input)="updateFilters()"
                    class="form-control" id="search-training-date-to">
           </div>

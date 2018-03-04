@@ -72,8 +72,13 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 5,
         name: 'Kurs Pythona',
         date: '2018-10-24',
-        shortDescription: 'Przykładowy opis 5',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        shortDescription: 'Uczestnicy szkolenia zapoznają się z programowaniem w języku Python oraz biblioteką standardową tegoż języka.',
+        description: 'Uczestnicy szkolenia zapoznają się z programowaniem w języku Python oraz biblioteką standardową tegoż języka. Na zajęciach prezentowane są koncepcje programowania proceduralnego, obiektowego i niektóre elementy programowania funkcyjnego. Celem zajęć jest stworzenie solidnych podstaw dla świadomego stosowania języka i samodzielnego pogłębiania wiedzy i nabytych umiejętności. \n' +
+        'Słuchacze poznają różnorodne aspekty stosu technologicznego języka Python, jego charakter i to co sam twórca Python\'a określa jako jego "Zen". Szczególny nacisk kładziemy na zapoznanie się z dobrymi praktykami oraz zasadami pragmatycznego programowania.\n' +
+        'Szkolenie odpowiada potrzebom początkujących programistów, którzy znają absolutne podstawy innych języków programowania (pojęcie zmiennej, pętli, instrukcji warunkowej) oraz programistów zaawansowanych, którzy chcą poznać język Python i używać go w przyszłości w sposób produktywny.\n' +
+        'Jako narzędzi wspierających używamy IDE Eclipse oraz NetBeans. Nie jest to jednak narzucane słuchaczom. Prezentowane są te elementy narzędzi, które umożliwiają szybszą naukę lub diagnostykę błędów. Na zajęciach posługujemy się technologiami otwartymi z pełnym dostępem do kodu źródłowego.\n' +
+        '\n' +
+        'Zajęcia prowadzone są przez doświadczonych praktyków, którzy na co dzień używają języka Python w rozbudowanych projektach. Oprócz doświadczenia związanego z uczestniczeniem w projektach, posiadają także długoletnie doświadczenie w prowadzeniu zajęć poparte odpowiednimi certyfikatami.',
         image: 'python.jpg',
         rateOne: 2,
         rateTwo: 3,
@@ -99,7 +104,17 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Zaawansowany Javascript',
         date: '2017-01-04',
         shortDescription: 'Szkolenie przeznaczone jest dla programistów i projektantów JavaScript pragnących poszerzyć swoje umiejętności o zagadnienia zaawansowane, popularne biblioteki, wzorce, najlepsze praktyki i architektury.',
-        description: 'Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis. Długi opis.',
+        description: 'Celem szkolenia jest zapoznanie uczestników z teoretycznymi oraz praktycznymi zagadnieniami technologii HTML 5, JavaScript oraz frameworkiem AngularJS, umożliwiające efektywne tworzenie aplikacji webowych.\n' +
+        '\n' +
+        'Osoby, które ukończą szkolenie dowiedzą się jak:\n' +
+        '\n' +
+        'tworzyć strony i formularze w HTML 5, także w sposób umożliwiający przenośność,\n' +
+        'stosować style CSS 3 do formatowania stron i tworzenia efektów graficznych,\n' +
+        'korzystać z zaawansowanych funkcjonalności HTML 5 takich jak operacje na plikach, drag & drop, komunikacja z serwerem lub osadzanie multimediów,\n' +
+        'tworzyć dowolne efekty graficzne dzięki nowym elementom HTML 5,\n' +
+        'stosować język JavaScript do rozwiązywania popularnych problemów,\n' +
+        'zaimplementować architekturę Model-View-Controller w aplikacji webowej dzięki użyciu AngularJS.\n' +
+        'Powyższa wiedza umożliwi uczestnikom na samodzielne tworzenie zaawansowanych interfejsów aplikacji webowych stosując popularne standardy.',
         image: 'advanced_javascript.png',
         rateOne: 4,
         rateTwo: 2,
