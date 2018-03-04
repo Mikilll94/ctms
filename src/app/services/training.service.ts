@@ -11,10 +11,10 @@ export class TrainingService {
   constructor(private http: HttpClient) {
   }
 
-  getTrainings(filters?): Observable<Training[]> {
+  getTrainings(nameFilter?: string): Observable<Training[]> {
     let params = new HttpParams();
-    if (filters !== undefined) {
-      params = filters.name ? params.append('name', filters.name) : params;
+    if (nameFilter !== undefined) {
+      params = params.append('name', nameFilter);
     }
     return this.http.get<Training[]>(this.trainingsUrl, {params: params});
   }

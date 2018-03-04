@@ -27,7 +27,7 @@ export class TrainingSearchComponent implements OnInit {
   ngOnInit() {
     this.nameFilterSubject
       .debounceTime(300)
-      .switchMap((nameFilter: string) => this.trainingService.getTrainings({name: nameFilter}))
+      .switchMap((nameFilter: string) => this.trainingService.getTrainings(nameFilter))
       .map(trainings => trainings.filter(training => {
         if (this.dateFromFilter && this.dateToFilter) {
           return training.date >= this.dateFromFilter && training.date <= this.dateToFilter;
